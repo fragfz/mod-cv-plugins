@@ -23,6 +23,7 @@ all:
 	$(MAKE) -C source/mod-midi-to-cv-poly
 	$(MAKE) -C source/mod-logic-operators
 	$(MAKE) -C source/mod-button-to-cv
+	$(MAKE) -C source/fa-cv-time
 
 install: all
 	install -d $(LV2_DESTDIR)
@@ -48,6 +49,7 @@ install: all
 	cp -r source/mod-midi-to-cv-mono/mod-midi-to-cv-mono.lv2                 $(LV2_DESTDIR)
 	cp -r source/mod-midi-to-cv-poly/mod-midi-to-cv-poly.lv2                 $(LV2_DESTDIR)
 	cp -r source/mod-button-to-cv/mod-button-to-cv.lv2                       $(LV2_DESTDIR)
+    cp -r source/fa-cv-time/fa-cv-time.lv2           			            $(LV2_DESTDIR)
 
 clean:
 	$(MAKE) clean -C source/mod-audio-to-cv
@@ -72,3 +74,5 @@ clean:
 	$(MAKE) clean -C source/mod-midi-to-cv-mono
 	$(MAKE) clean -C source/mod-midi-to-cv-poly
 	$(MAKE) clean -C source/mod-button-to-cv
+	$(MAKE) clean -C source/fa-cv-time
+
